@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="invalid_name">Le champ est vide !</string>
+    <string name="invalid">Le champ est vide !</string>
+    <string name="invalid_password">Mot de passe incorrecte !</string>
+</resources>
