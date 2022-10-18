@@ -17,4 +17,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="Gestion_des_equipes">Gestion des equipes</string>
+    <string name="Gestion_des_t_ches">Gestion des tâches</string>
+    <string name="Employées">Employées</string>
+    <string name="Equipes">Equipes</string>
+    <string name="Tâches">tâches</string>
 </resources>
