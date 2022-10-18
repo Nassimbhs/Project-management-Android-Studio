@@ -3,4 +3,8 @@
     <string name="invalid_name">Le champ est vide !</string>
     <string name="invalid">Le champ est vide !</string>
     <string name="invalid_password">Mot de passe incorrecte !</string>
+    <string name="title_activity_accueil">Accueil</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
