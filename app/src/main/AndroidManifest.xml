@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".Acceuil"
+            android:exported="false"
+            android:label="@string/title_activity_acceuil"
+            android:theme="@style/Theme.Project.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Register"
             android:exported="true">
             <intent-filter>
@@ -27,7 +36,6 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
-
     </application>
 
 </manifest>
