@@ -7,4 +7,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="menu_home" />
+    <string name="menu_gallery" />
+    <string name="menu_slideshow" />
 </resources>
