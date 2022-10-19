@@ -4,12 +4,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
+import com.example.project.DAO.UserDAO;
+import com.example.project.Database.Mydatabase;
+import com.example.project.Entity.User;
 
 public class Login extends AppCompatActivity {
 
@@ -17,6 +25,8 @@ public class Login extends AppCompatActivity {
     Button loginbtn;
     EditText email;
     EditText password;
+
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +37,6 @@ public class Login extends AppCompatActivity {
         loginbtn = findViewById(R.id.btn_login);
         email = findViewById(R.id.emaillogin);
         password = findViewById(R.id.passwordlogin);
-
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,9 +58,10 @@ public class Login extends AppCompatActivity {
                 editor.putString("password", password.getText().toString());
                 editor.apply();
 
-                    Intent intent = new Intent(Login.this, Acceuil.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(Login.this, Acceuil.class);
+                startActivity(intent);
+
+            }
 
         });
 

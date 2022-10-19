@@ -30,6 +30,8 @@ public class Register extends AppCompatActivity {
     private Button loginbtn;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
+    private RadioGroup radioGrouptype;
+    private RadioButton radioButtontype;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,6 +48,9 @@ public class Register extends AppCompatActivity {
         radioGroup = findViewById(R.id.selectedid);
         radioButton = findViewById(R.id.homme);
         radioButton = findViewById(R.id.femme);
+        radioGrouptype = findViewById(R.id.selectedidType);
+        radioButtontype = findViewById(R.id.admin);
+        radioButtontype = findViewById(R.id.employee);
 
         //initilisation
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
@@ -86,12 +91,17 @@ public class Register extends AppCompatActivity {
                     radioButton = findViewById(selectedid);
                     String sexe = radioButton.getText().toString();
 
-                    User user = new User(nom, prenom, email, password, confirmpassword,sexe);
+                    //Récupérer bouton radio
+                        int selectedidType = radioGrouptype.getCheckedRadioButtonId();
+                        radioButtontype = findViewById(selectedidType);
+                        String role = radioButtontype.getText().toString();
+
+                        User user = new User(nom, prenom, email, password, confirmpassword,sexe,role);
 
                         Mydatabase.getDatabase(Register.this).userDAO().insertUser(user);
 
-                    Intent intent = new Intent(Register.this, Login.class);
-                    startActivity(intent);
+                        Intent intent = new Intent(Register.this, Login.class);
+                        startActivity(intent);
 
                     Toast.makeText(getApplicationContext(),
                             "Le formulaire est validé avec succès !",

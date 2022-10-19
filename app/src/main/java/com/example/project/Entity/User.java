@@ -3,6 +3,8 @@ package com.example.project.Entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
 public class User {
 
@@ -14,17 +16,19 @@ public class User {
     private String password;
     private String confirmpassword;
     private String sexe;
+    private String role;
 
     public User() {
     }
 
-    public User(String nom, String prenom, String email, String password, String confirmpassword, String sexe) {
+    public User(String nom, String prenom, String email, String password, String confirmpassword, String sexe, String role) {
         this.nom = nom;
         Prenom = prenom;
         this.email = email;
         this.password = password;
         this.confirmpassword = confirmpassword;
         this.sexe = sexe;
+        this.role = role;
     }
 
     public int getId() {
@@ -83,6 +87,14 @@ public class User {
         this.sexe = sexe;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -93,6 +105,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", confirmpassword='" + confirmpassword + '\'' +
                 ", sexe='" + sexe + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 }
