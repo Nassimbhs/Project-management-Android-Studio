@@ -18,6 +18,7 @@ import androidx.room.Room;
 import com.example.project.DAO.UserDAO;
 import com.example.project.Database.Mydatabase;
 import com.example.project.Entity.User;
+import com.example.project.ui.home.HomeFragment;
 
 public class Login extends AppCompatActivity {
 
@@ -58,7 +59,7 @@ public class Login extends AppCompatActivity {
                 editor.putString("password", password.getText().toString());
                 editor.apply();
 
-                Intent intent = new Intent(Login.this, Acceuil.class);
+                Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
 
             }
