@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         SharedPreferences sp = getSharedPreferences("sp", MODE_PRIVATE);
-        setTitle("Hello " + sp.getString("username", "Skander"));
+        setTitle("Hello " + sp.getString("username", "Nassim"));
 
         recyclerView = findViewById(R.id.userview);
         Mydatabase db = Mydatabase.getDatabase(MainActivity.this);

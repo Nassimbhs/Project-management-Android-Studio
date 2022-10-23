@@ -24,10 +24,9 @@ public class Login extends AppCompatActivity {
 
     Button registerbtn;
     Button loginbtn;
-    EditText email;
-    EditText password;
+    EditText emailEt;
+    EditText passwordEt;
 
-    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +35,8 @@ public class Login extends AppCompatActivity {
 
         registerbtn = findViewById(R.id.btn_register);
         loginbtn = findViewById(R.id.btn_login);
-        email = findViewById(R.id.emaillogin);
-        password = findViewById(R.id.passwordlogin);
+        emailEt = findViewById(R.id.emaillogin);
+        passwordEt = findViewById(R.id.passwordlogin);
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,12 +51,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPreferences = getSharedPreferences("sp", MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-
-                editor.putString("email", email.getText().toString());
-                editor.putString("password", password.getText().toString());
-                editor.apply();
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
 
                 Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);

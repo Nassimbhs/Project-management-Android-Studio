@@ -22,7 +22,7 @@ public interface UserDAO {
     @Delete
     public void deleteUser(User u);
 
-    @Query("select * from User")
+    @Query("SELECT * FROM User")
     public List<User> findUser();
 
 }
