@@ -1,27 +1,15 @@
 package com.example.project;
 
-import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
-import androidx.activity.result.ActivityResult;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
@@ -43,6 +31,9 @@ public class Register extends AppCompatActivity {
     private RadioGroup radioGrouptype;
     private RadioButton radioButtontype;
 
+    public static final String EXTRA_ID= "com.exemple.project.extraid";
+    private boolean editMode;
+    private int mID;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -50,11 +41,11 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.register);
 
         nomEt = findViewById(R.id.nom);
-        prenomEt = findViewById(R.id.emaillogin);
-        emailEt = findViewById(R.id.email);
+        prenomEt = findViewById(R.id.description);
+        emailEt = findViewById(R.id.descp);
         passwordEt = findViewById(R.id.password);
         confirmpasswordEt = findViewById(R.id.confirmpassword);
-        registerbtn = findViewById(R.id.register_btn);
+        registerbtn = findViewById(R.id.ajoutp);
         loginbtn = findViewById(R.id.login);
         radioGroup = findViewById(R.id.selectedid);
         radioButton = findViewById(R.id.homme);
@@ -70,10 +61,10 @@ public class Register extends AppCompatActivity {
         awesomeValidation.addValidation(this,R.id.nom,
                 RegexTemplate.NOT_EMPTY,R.string.invalid);
 
-        awesomeValidation.addValidation(this,R.id.emaillogin,
+        awesomeValidation.addValidation(this,R.id.description,
                 RegexTemplate.NOT_EMPTY,R.string.invalid);
 
-        awesomeValidation.addValidation(this,R.id.email,
+        awesomeValidation.addValidation(this,R.id.descp,
                 RegexTemplate.NOT_EMPTY,R.string.invalid);
 
         awesomeValidation.addValidation(this,R.id.password,

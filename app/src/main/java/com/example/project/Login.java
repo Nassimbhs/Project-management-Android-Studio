@@ -1,24 +1,12 @@
 package com.example.project;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
-import com.example.project.DAO.UserDAO;
-import com.example.project.Database.Mydatabase;
-import com.example.project.Entity.User;
-import com.example.project.ui.home.HomeFragment;
 
 public class Login extends AppCompatActivity {
 
@@ -35,7 +23,7 @@ public class Login extends AppCompatActivity {
 
         registerbtn = findViewById(R.id.btn_register);
         loginbtn = findViewById(R.id.btn_login);
-        emailEt = findViewById(R.id.emaillogin);
+        emailEt = findViewById(R.id.description);
         passwordEt = findViewById(R.id.passwordlogin);
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
@@ -51,10 +39,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String email = getIntent().getStringExtra("email");
-                String password = getIntent().getStringExtra("password");
-
-                Intent intent = new Intent(Login.this, MainActivity.class);
+                Intent intent = new Intent(Login.this, ProjectList.class);
                 startActivity(intent);
 
             }
