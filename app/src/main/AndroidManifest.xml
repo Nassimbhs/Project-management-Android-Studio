@@ -17,6 +17,29 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".Home_activity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Project.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Equipeprojet"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EquipeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Projects"
             android:exported="false">
             <meta-data
@@ -48,6 +71,10 @@
         <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ProjectList" />
+        <activity android:name=".Taches" />
+        <activity android:name=".EquipeList" />
+        <activity android:name=".Tachelist" />
+        <activity android:name=".Updatedata" />
 
     </application>
 

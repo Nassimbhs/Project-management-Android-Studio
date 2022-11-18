@@ -40,12 +40,12 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        nomEt = findViewById(R.id.nom);
-        prenomEt = findViewById(R.id.description);
-        emailEt = findViewById(R.id.descp);
+        nomEt = findViewById(R.id.nomtac);
+        prenomEt = findViewById(R.id.datedeb);
+        emailEt = findViewById(R.id.datefin);
         passwordEt = findViewById(R.id.password);
         confirmpasswordEt = findViewById(R.id.confirmpassword);
-        registerbtn = findViewById(R.id.ajoutp);
+        registerbtn = findViewById(R.id.ajouttac);
         loginbtn = findViewById(R.id.login);
         radioGroup = findViewById(R.id.selectedid);
         radioButton = findViewById(R.id.homme);
@@ -58,13 +58,13 @@ public class Register extends AppCompatActivity {
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
         //ajouter validation
-        awesomeValidation.addValidation(this,R.id.nom,
+        awesomeValidation.addValidation(this,R.id.nomtac,
                 RegexTemplate.NOT_EMPTY,R.string.invalid);
 
-        awesomeValidation.addValidation(this,R.id.description,
+        awesomeValidation.addValidation(this,R.id.datedeb,
                 RegexTemplate.NOT_EMPTY,R.string.invalid);
 
-        awesomeValidation.addValidation(this,R.id.descp,
+        awesomeValidation.addValidation(this,R.id.datefin,
                 RegexTemplate.NOT_EMPTY,R.string.invalid);
 
         awesomeValidation.addValidation(this,R.id.password,

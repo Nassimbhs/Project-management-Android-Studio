@@ -23,13 +23,13 @@ public class Login extends AppCompatActivity {
 
         registerbtn = findViewById(R.id.btn_register);
         loginbtn = findViewById(R.id.btn_login);
-        emailEt = findViewById(R.id.description);
+        emailEt = findViewById(R.id.datedeb);
         passwordEt = findViewById(R.id.passwordlogin);
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, Register.class);
+                Intent intent = new Intent(Login.this, Tachelist.class);
                 startActivity(intent);
 
             }
@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Login.this, ProjectList.class);
+                Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
 
             }

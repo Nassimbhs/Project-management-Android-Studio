@@ -22,4 +22,5 @@
     <string name="Employées">Employées</string>
     <string name="Equipes">Equipes</string>
     <string name="Tâches">tâches</string>
+    <string name="title_activity_home">Home_activity</string>
 </resources>

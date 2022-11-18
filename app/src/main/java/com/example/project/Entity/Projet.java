@@ -6,12 +6,12 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Projet {
 
+    private String budget;
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String nom;
     private String description;
     private String secteur;
-    private String budget;
 
     public Projet() {
     }

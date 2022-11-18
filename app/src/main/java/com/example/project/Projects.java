@@ -29,20 +29,20 @@ public class Projects extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
 
-        nomEt = findViewById(R.id.nom);
-        descriptionEt = findViewById(R.id.description);
+        nomEt = findViewById(R.id.nomtac);
+        descriptionEt = findViewById(R.id.datedeb);
         budgetEt = findViewById(R.id.budget);
         SecteurEt = findViewById(R.id.secteur);
-        ajout = findViewById(R.id.ajoutp);
+        ajout = findViewById(R.id.ajouttac);
 
         //initilisation
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
         //ajouter validation
-        awesomeValidation.addValidation(this, R.id.nom,
+        awesomeValidation.addValidation(this, R.id.nomtac,
                 RegexTemplate.NOT_EMPTY, R.string.invalid);
 
-        awesomeValidation.addValidation(this, R.id.description,
+        awesomeValidation.addValidation(this, R.id.datedeb,
                 RegexTemplate.NOT_EMPTY, R.string.invalid);
 
         awesomeValidation.addValidation(this, R.id.budget,

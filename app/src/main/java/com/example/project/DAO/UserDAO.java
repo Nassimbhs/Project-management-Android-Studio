@@ -16,11 +16,17 @@ public interface UserDAO {
     @Insert
     public void insertUser(User u);
 
-    @Update
-    public void updateUser(User u);
+    @Query("SELECT EXISTS(SELECT * FROM User WHERE id = :userId)")
+    Boolean is_exist(int userId);
 
-    @Delete
-    public void deleteUser(User u);
+    @Query("DELETE FROM User WHERE id = :id")
+    void deleteById(int id);
+
+    @Query("UPDATE User SET id=:id, nom =:name1 ,prenom=:pnom, email=:mail ,password=:pass,confirmpassword=:cpass,sexe=:se,role=:ro")
+    void updateById(int id,String name1,String pnom,String mail,String pass,String cpass,String se,String ro);
+
+    @Update
+    void updateUser(User u);
 
     @Query("SELECT * FROM User")
     public List<User> findUser();

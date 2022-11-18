@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
-        android:text="Ajout projet"
+        android:text="Ajout tâche"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="50dp" />
 
@@ -35,25 +35,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Description"
+        android:hint="Prénom"
         android:padding="10dp" />
 
 
     <EditText
-        android:id="@+id/budget"
+        android:id="@+id/datefin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="budget"
-        android:inputType="textEmailAddress"
-        android:padding="10dp" />
-
-    <EditText
-        android:id="@+id/secteur"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="secteur"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:padding="10dp" />
 
@@ -63,7 +54,7 @@
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="Ajouter"
+        android:text="S’inscrire "
         android:textColor="#ffffff" />
 
 </LinearLayout>

@@ -6,16 +6,22 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
+    <SearchView
+        android:id="@+id/searc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/userview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        tools:layout_editor_absoluteX="0dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/userview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:itemCount="3"
+        tools:layout_editor_absoluteY="69dp"
         tools:listitem="@layout/listuser" />
 </androidx.constraintlayout.widget.ConstraintLayout>
