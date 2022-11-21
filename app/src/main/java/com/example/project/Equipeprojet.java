@@ -20,6 +20,7 @@ public class Equipeprojet extends AppCompatActivity {
     private EditText nomeT;
     private EditText nombreEt;
     private Button button;
+    private Button veq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,16 @@ public class Equipeprojet extends AppCompatActivity {
         nomeT = findViewById(R.id.nomequip);
         nombreEt = findViewById(R.id.nombreequip);
         button = findViewById(R.id.ajoutequip);
+
+        veq = findViewById(R.id.veq);
+
+        veq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Equipeprojet.this, EquipeList.class);
+                startActivity(intent);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

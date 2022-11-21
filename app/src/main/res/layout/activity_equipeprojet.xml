@@ -49,4 +49,10 @@
             android:text="Ajouter"
             android:textColor="#ffffff" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/veq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voir les équipes" />
+
+</LinearLayout>

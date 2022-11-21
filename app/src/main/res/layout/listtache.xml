@@ -19,6 +19,13 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/idtac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/nomtache"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -26,7 +33,7 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/datedebtache"
+                android:id="@+id/datedebtac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -38,6 +45,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView" />
+
+            <Button
+                android:id="@+id/edittac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/deletetac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

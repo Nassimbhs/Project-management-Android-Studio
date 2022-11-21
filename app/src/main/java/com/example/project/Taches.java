@@ -18,7 +18,8 @@ public class Taches extends AppCompatActivity {
     private EditText nomEt;
     private EditText datedebEt;
     private EditText datefinEt;
-    private Button button;
+    private Button ajouttac;
+    private Button vtace;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,11 +28,19 @@ public class Taches extends AppCompatActivity {
 
 
         nomEt = findViewById(R.id.nomtac);
-        datedebEt = findViewById(R.id.datedeb);
+        datedebEt = findViewById(R.id.emaillog);
         datefinEt = findViewById(R.id.datefin);
-        button = findViewById(R.id.ajouttac);
+        ajouttac = findViewById(R.id.ajouttac);
+        vtace = findViewById(R.id.vtace);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        vtace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Taches.this, Tachelist.class);
+                startActivity(intent);
+            }
+        });
+        ajouttac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -43,7 +52,7 @@ public class Taches extends AppCompatActivity {
 
                     Mydatabase.getDatabase(Taches.this).tacheDAO().insertTache(tache);
 
-                    Intent intent = new Intent(Taches.this, Login.class);
+                    Intent intent = new Intent(Taches.this, Tachelist.class);
                     startActivity(intent);
 
                     Toast.makeText(getApplicationContext(),

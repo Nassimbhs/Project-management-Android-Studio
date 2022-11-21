@@ -29,6 +29,7 @@ public class Updatedata extends AppCompatActivity {
         cpass = findViewById(R.id.cpass2);
         se = findViewById(R.id.se2);
         ro = findViewById(R.id.ro2);
+        Updateuser =findViewById(R.id.Updateuser);
 
         id = Integer.parseInt(getIntent().getStringExtra("id"));
         name1.setText(getIntent().getStringExtra("name1"));

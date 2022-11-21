@@ -17,6 +17,20 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".Update_tache"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Acc"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Home_activity"
             android:exported="false"
             android:label="@string/title_activity_home"
@@ -75,7 +89,6 @@
         <activity android:name=".EquipeList" />
         <activity android:name=".Tachelist" />
         <activity android:name=".Updatedata" />
-
     </application>
 
 </manifest>

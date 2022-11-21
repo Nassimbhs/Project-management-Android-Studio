@@ -17,6 +17,13 @@ public interface TacheDAO {
     @Update
     public void updateTache(Tache t);
 
+
+    @Query("DELETE FROM Tache WHERE id = :id")
+    void deleteById(int id);
+
+    @Query("UPDATE Tache SET id=:id,nom=:nom, datedeb =:datedeb ,datefin=:datefin")
+    void updateById(int id,String nom, String datedeb,String datefin);
+
     @Delete
     public void deleteTache(Tache t);
 

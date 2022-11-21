@@ -23,6 +23,7 @@ public class Projects extends AppCompatActivity {
     private EditText SecteurEt;
     private EditText budgetEt;
     private Button ajout;
+    private Button vpro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,19 @@ public class Projects extends AppCompatActivity {
         setContentView(R.layout.activity_project);
 
         nomEt = findViewById(R.id.nomtac);
-        descriptionEt = findViewById(R.id.datedeb);
+        descriptionEt = findViewById(R.id.emaillog);
         budgetEt = findViewById(R.id.budget);
         SecteurEt = findViewById(R.id.secteur);
         ajout = findViewById(R.id.ajouttac);
+        vpro = findViewById(R.id.vpro);
+
+        vpro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Projects.this, ProjectList.class);
+                startActivity(intent);
+            }
+        });
 
         //initilisation
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
@@ -42,7 +52,7 @@ public class Projects extends AppCompatActivity {
         awesomeValidation.addValidation(this, R.id.nomtac,
                 RegexTemplate.NOT_EMPTY, R.string.invalid);
 
-        awesomeValidation.addValidation(this, R.id.datedeb,
+        awesomeValidation.addValidation(this, R.id.emaillog,
                 RegexTemplate.NOT_EMPTY, R.string.invalid);
 
         awesomeValidation.addValidation(this, R.id.budget,

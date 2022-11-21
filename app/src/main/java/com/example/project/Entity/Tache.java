@@ -20,6 +20,13 @@ public class Tache {
         this.datefin = datefin;
     }
 
+    public Tache(int id, String nom, String datedeb, String datefin) {
+        this.id = id;
+        this.nom = nom;
+        this.datedeb = datedeb;
+        this.datefin = datefin;
+    }
+
     public int getId() {
         return id;
     }
